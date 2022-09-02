@@ -32,7 +32,7 @@
           </ul>
         </nav>
 
-        <div class="address">
+        <div class="address address-top">
           <ul class="list nav__address">
             <li class="address__item">
               <a href="mailto:info@devstudio.com" class="link header__contacts header__link">
@@ -48,6 +48,46 @@
                 >+38 096 111 11 11</a
               >
             </li>
+          </ul>
+        </div>
+
+        <button type="button" class="menu__button menu__button-open" data-menu-open>
+          <svg class="" width="40" height="40" aria-label="Вызов мобильного меню">
+            <use class="icon-open" href="./images/sprite.svg#menu-open"></use>
+          </svg>
+        </button>
+
+        <!-- * Мобильное меню -->
+
+        <div class="mobile-menu is-hidden" data-menu>
+          <button type="button" class="menu__button menu__button-close" data-menu-close>
+            <svg class="" width="40" height="40" aria-label="Вызов мобильного меню">
+              <use class="icon-close" href="./images/sprite.svg#menu-close"></use>
+            </svg>
+          </button>
+
+          <ul class="list mobile-menu__nav">
+            <li class="mobile-menu__nav-item">
+              <a href="./index.html" class="link mobile-menu__nav-link">Студия</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a href="./portfolio.html" class="link mobile-menu__nav-link mobile-menu__nav-link-current">Портфолио</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a href="#" class="link mobile-menu__nav-link">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="list mobile-menu__contacts">
+            <li class="mobile-menu__contacts-item"><a href="tell:380961111111" class="link mobile-menu__contacts-tell">+38 096 111 11 11</a></li>
+            <li class="mobile-menu__contacts-item"><a href="mailto:info@devstudio.com" class="link mobile-menu__contacts-mail">info@devstudio.com</a></li>
+          </ul>
+
+          <ul class="list mobile-menu__socials">
+            <li class="mobile-menu__socials-item"><a href="#" class="link mobile-menu__socials-link" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram">Instagram</a></li>
+            <li class="mobile-menu__socials-item"><a href="#" class="link mobile-menu__socials-link" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter">Twitter</a></li>
+            <li class="mobile-menu__socials-item"><a href="#" class="link mobile-menu__socials-link" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook">Facebook</a></li>
+            <li class="mobile-menu__socials-item"><a href="#" class="link mobile-menu__socials-link" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn">LinkedIn</a></li>
           </ul>
         </div>
       </div>
@@ -210,7 +250,7 @@
       <div class="container footer__container">
         <div>
           <a href="./index.html" class="logo footer__logo logo-light footer__link" lang="en"> <span class="logo__accent">Web</span>Studio</a>
-          <address class="address">
+          <address class="address address-bottom">
             <ul class="list footer__list">
               <li class="footer__item">
                 <a href="https://www.google.com.ua/maps/place/бул.+Леси+Украинки,+26,+Киев,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru" class="footer__address link footer__link"> г. Киев, пр-т Леси Украинки, 26 </a>
@@ -257,8 +297,6 @@
             </li>
           </ul>
         </div>
-
-        <!-- **Форма в footer  -->
         <div class="form-inner">
           <strong class="form-inner__slogan">Подпишитесь на рассылку </strong>
           <form name="signup_form" autocomplete="on" novalidate class="form-footer">
@@ -276,5 +314,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- *Подключение js -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

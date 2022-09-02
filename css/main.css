@@ -194,6 +194,11 @@ body.modal-open {
   border-radius: 4px;
   background-color: var(--primary-background-color);
 }
+@media screen and (max-width: 479px) {
+  .modal {
+    top: 65%;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 1200px) {
   .modal {
     width: 450px;
@@ -273,6 +278,7 @@ body.modal-open {
 }
 @media screen and (max-width: 479px) {
   .modal__title {
+    margin-bottom: 6px;
     font-size: 16px;
   }
 }
@@ -293,6 +299,11 @@ body.modal-open {
   transition: border-color 300ms var(--timing-function), outline 300ms var(--timing-function);
   /* *синяя рамка инпута при ховере */
   /* *синяя рамка инпута при фокусе */
+}
+@media screen and (max-width: 479px) {
+  .label__input {
+    margin-bottom: 5px;
+  }
 }
 .modal__label:hover .label__input {
   border-color: var(--accent-color);
@@ -341,6 +352,12 @@ body.modal-open {
   transition: border-color 300ms var(--timing-function), outline 300ms var(--timing-function);
   /* *синяя рамка поля ввода текста при фокусе */
   /* *синяя рамка поля ввода текста при ховере */
+}
+@media screen and (max-width: 479px) {
+  .label__feedback {
+    height: 100px;
+    margin-bottom: 6px;
+  }
 }
 .label__feedback::-webkit-input-placeholder {
   font-weight: 400;
@@ -400,9 +417,9 @@ body.modal-open {
 }
 @media screen and (max-width: 479px) {
   .modal__checkbox {
-    gap: 10px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 10px;
   }
 }
 
@@ -501,6 +518,11 @@ body.modal-open {
   transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
   transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
   transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+}
+@media screen and (max-width: 479px) {
+  .modal__submit {
+    padding: 5px 14px 5px 14px;
+  }
 }
 .modal__submit:hover {
   background-color: var(--hero-hover-color);
@@ -838,7 +860,7 @@ body.modal-open {
 }
 @media screen and (max-width: 380px) {
   .mobile-menu__contacts-tell {
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 
@@ -1544,6 +1566,11 @@ body.modal-open {
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
+@media screen and (max-width: 479px) {
+  .filter__btn {
+    padding: 6px 8px;
+  }
+}
 .filter__btn:hover, .filter__btn:focus {
   background-color: var(--accent-color);
   color: var(--primary-background-color);
@@ -1563,15 +1590,26 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media screen and (min-width: 767px) {
+  .filter__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filter__item:nth-child(-n+3) {
+  margin-bottom: 15px;
 }
 
 /* *========Карточки портфолио========== */
@@ -1638,22 +1676,23 @@ body.modal-open {
 .cards__dropdown {
   position: relative;
   overflow: hidden;
+  width: 354px;
 }
 
 .dropdown__text-hover {
   position: absolute;
   left: 0;
   top: 0;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translateY(102%);
-          transform: translateY(102%);
+  -webkit-transform: translateY(125%);
+          transform: translateY(125%);
   -webkit-transition: -webkit-transform 250ms var(--timing-function);
   transition: -webkit-transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function);

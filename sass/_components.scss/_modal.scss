@@ -33,6 +33,10 @@
   border-radius: 4px;
   background-color: var(--primary-background-color);
 
+  @include start {
+    top: 65%;
+  }
+
   @include mobile-tablet {
     width: 450px;
   }
@@ -95,6 +99,7 @@
   color: #212121;
 
   @include start {
+    margin-bottom: 6px;
     font-size: 16px;
   }
 
@@ -111,6 +116,10 @@
   border-radius: 4px;
   padding-left: 40px;
   transition: border-color 300ms var(--timing-function), outline 300ms var(--timing-function);
+
+  @include start {
+    margin-bottom: 5px;
+  }
 
   /* *синяя рамка инпута при ховере */
   .modal__label:hover & {
@@ -163,6 +172,11 @@
   border-radius: 4px;
   transition: border-color 300ms var(--timing-function), outline 300ms var(--timing-function);
 
+  @include start {
+    height: 100px;
+    margin-bottom: 6px;
+  }
+
   &::placeholder {
     font-weight: 400;
     font-size: 12px;
@@ -192,8 +206,8 @@
   // outline: 2px dashed teal;
 
   @include start {
-    gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 10px;
   }
 }
 
@@ -282,6 +296,10 @@
   color: var(--secondary-title-color);
   background-color: var(--accent-color);
   transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+
+  @include start {
+    padding: 5px 14px 5px 14px;
+  }
 
   &:hover {
     background-color: var(--hero-hover-color);
