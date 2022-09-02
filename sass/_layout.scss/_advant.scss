@@ -1,0 +1,47 @@
+.advant__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  // width: 270px;
+  height: 120px;
+  background-color: var(--advant-icon-bg-color);
+  border-radius: 4px;
+}
+
+.advant__title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: var(--head-weight);
+  font-size: var(--text-size);
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+
+  @include tablet {
+    text-align: left;
+  }
+}
+
+.advant__item {
+  width: 100%;
+  outline: 2px solid yellow;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    flex-basis: calc(100% / 4 - 23px);
+  }
+}
+
+/* текст преимущества p */
+.advant__text {
+  font-size: var(--text-size);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}

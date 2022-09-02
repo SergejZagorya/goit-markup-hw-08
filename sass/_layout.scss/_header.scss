@@ -1,0 +1,174 @@
+.header {
+  position: relative;
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.header__logo {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header__container {
+  display: flex;
+}
+
+/** кнопки навигации **/
+.nav__link {
+  position: relative;
+  display: block;
+  font-weight: var(--secondary-weight);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: transform 250ms var(--timing-function);
+  }
+
+  /**Полоска под кнопками навигации*/
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:focus::before {
+    transform: scaleX(1);
+  }
+}
+
+/** ссылки в header  */
+.header__link {
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &-current {
+    color: var(--accent-color);
+  }
+
+  &-current::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+/** адрес в header **/
+.header__contacts {
+  display: flex;
+  align-items: center;
+  font-weight: var(--secondary-weight);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/** Header в строку **/
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: none;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  &__address {
+    display: none;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      display: flex;
+    }
+  }
+
+  &__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__list {
+    margin-left: 93px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header__contacts {
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 10px;
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
+
+.address {
+  font-style: inherit;
+}
+
+.address-top {
+  margin-left: auto;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.header__icon {
+  margin-right: 10px;
+  fill: currentColor;
+
+  /**Цвет иконок адреса в header при ховере */
+  .header__contacts:hover & {
+    fill: currentColor;
+  }
+
+  .header__contacts:focus & {
+    fill: currentColor;
+  }
+}

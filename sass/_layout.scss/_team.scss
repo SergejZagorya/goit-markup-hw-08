@@ -1,0 +1,49 @@
+.team {
+  background-color: var(--secondary-background-color);
+
+  &__item {
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--primary-background-color);
+    outline: 2px solid yellow;
+
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+      width: calc((100% - 90px) / 4);
+    }
+  }
+
+  /* имя фамилия h2 */
+  &__info {
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @include desktop {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: var(--secondary-weight);
+    font-size: var(--note-size);
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--title-color);
+  }
+
+  /* должности p */
+  &__descr {
+    margin-bottom: 16px;
+    font-size: var(--note-size);
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--text-color);
+  }
+}

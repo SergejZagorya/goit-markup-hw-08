@@ -1,0 +1,103 @@
+.hero {
+  margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: var(--hero-background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bground.jpg);
+
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+/** заголовок героя h1*/
+.hero__title {
+  margin: 0 auto 30px;
+  text-align: center;
+  width: 100%;
+  font-weight: var(--hero-weight);
+  font-size: var(--hero-size-mobile);
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-title-color);
+
+  @include tablet {
+    width: 360px;
+  }
+
+  @include desktop {
+    width: 696px;
+    font-size: var(--hero-size);
+    line-height: 1.36;
+  }
+}
+
+/** кнопка героя */
+.hero__button {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px 24px 10px 24px;
+  min-width: 200px;
+  font-weight: var(--head-weight);
+  font-size: var(--note-size);
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  color: var(--secondary-title-color);
+  background-color: var(--accent-color);
+  transition: background-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hero-hover-color);
+  }
+
+  @include desktop {
+    padding: 10px 28px 10px 52px;
+  }
+}
+
+.hero__icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms var(--timing-function);
+  fill: var(--secondary-title-color);
+
+  .hero__button:hover & {
+    transform: translate(-55%, -195%);
+  }
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.hero__icon-hovered {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-54%, 90%);
+  transition: transform 250ms var(--timing-function);
+  fill: var(--secondary-title-color);
+
+  .hero__button:hover & {
+    transform: translate(-55%, -50%);
+  }
+}

@@ -1,0 +1,86 @@
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+  color: var(--text-color);
+  background-color: var(--primary-background-color);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 2px solid tomato;
+
+  @include mobile {
+    width: 480px;
+    outline: 2px solid blue;
+  }
+
+  @include tablet {
+    width: 768px;
+    outline: 2px solid darkgreen;
+  }
+
+  @include desktop {
+    width: 1200px;
+    outline: 2px solid lightslategrey;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // background-color: aquamarine;
+  outline: 2px solid yellow;
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.link {
+  font-size: 14px;
+  color: var(--title-color);
+}
+
+.list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.button {
+  font-style: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+/* названия секций h2*/
+.title {
+  font-size: var(--title-size);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.section__title {
+  margin-bottom: 30px;
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}

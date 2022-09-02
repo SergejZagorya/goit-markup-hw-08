@@ -1,0 +1,48 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* *Ховер подложки иконок соцсетей */
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.social__item + .social__item {
+  margin-left: 10px;
+}
+
+.social__icon {
+  fill: var(--social-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /** Ховер иконок соцсетей */
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: var(--social-icon-hover-color);
+  }
+}
+
+.social__link-light {
+  background-color: var(--primary-background-color);
+}
+
+.social__link-dark {
+  background-color: var(--footer-icon-bg-color);
+}
+
+.join__icon {
+  fill: var(--secondary-title-color);
+}

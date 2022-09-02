@@ -1,0 +1,11 @@
+.menu__button {
+  display: inline-flex;
+  margin-left: auto;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+
+  @include tablet {
+    display: none;
+  }
+}
