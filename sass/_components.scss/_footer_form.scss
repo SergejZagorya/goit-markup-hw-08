@@ -17,6 +17,7 @@
 }
 
 .form-footer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,13 +28,14 @@
 }
 
 .form-footer__label {
+  width: 100%;
   @include desktop {
     margin-right: 12px;
   }
 }
 
 .form-footer__input {
-  min-width: 358px;
+  width: 100%;
   min-height: 50px;
   margin-bottom: 20px;
   padding-left: 20px;
