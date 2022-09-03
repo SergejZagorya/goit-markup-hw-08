@@ -18,6 +18,10 @@
   display: block;
   text-align: center;
   margin-bottom: 20px;
+
+  @include desktop {
+    text-align: start;
+  }
 }
 
 .footer__item {
@@ -34,6 +38,11 @@
 .address-bottom {
   text-align: center;
   margin-bottom: 60px;
+
+  @include desktop {
+    text-align: start;
+    margin-bottom: 0;
+  }
 }
 
 .footer__address {
@@ -64,6 +73,10 @@
   @include tablet {
     margin: 0;
   }
+
+  @include desktop {
+    margin-left: 70px;
+  }
 }
 
 .footer__slogan {
@@ -75,4 +88,8 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-title-color);
+
+  @include desktop {
+    text-align: left;
+  }
 }

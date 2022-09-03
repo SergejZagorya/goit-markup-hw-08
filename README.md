@@ -24,3 +24,13 @@ body {
 background-color: yellow;
 }
 }
+
+<picture>
+  <source media="(min-width: 1200px)" srcset="./images/portfolio/1-1200.jpg 1x, ./images/portfolio/1-1200@2x.jpg 2x" />
+
+  <source media="(min-width: 480px)" srcset="./images/portfolio/1-480.jpg 1x, ./images/portfolio/1-480@2x.jpg 2x" />
+
+  <img src="./images/portfolio/1-1200.jpg" alt="Пример веб-сайта" width="370" height="294" />
+</picture>
+
+  <source media="(min-width: 768px)" srcset="./images/portfolio/1-768.jpg 1x, ./images/portfolio/1-768@2x.jpg 2x" />

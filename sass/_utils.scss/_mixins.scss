@@ -22,6 +22,12 @@
   }
 }
 
+@mixin tablet-only {
+  @media screen and(min-width: 767px) and(max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin mobile-tablet {
   @media screen and(min-width: 480px) and(max-width: 1200px) {
     @content;
@@ -30,6 +36,12 @@
 
 @mixin desktop {
   @media screen and(min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     @content;
   }
 }

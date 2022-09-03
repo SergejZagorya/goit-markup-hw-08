@@ -15,21 +15,21 @@ body.modal-open {
   padding-left: 15px;
   padding-right: 15px;
 
-  outline: 2px solid tomato;
+  // outline: 2px solid tomato;
 
   @include mobile {
     width: 480px;
-    outline: 2px solid blue;
+    // outline: 2px solid blue;
   }
 
   @include tablet {
     width: 768px;
-    outline: 2px solid darkgreen;
+    // outline: 2px solid darkgreen;
   }
 
   @include desktop {
     width: 1200px;
-    outline: 2px solid lightslategrey;
+    // outline: 2px solid lightslategrey;
   }
 }
 
@@ -37,7 +37,7 @@ body.modal-open {
   padding-top: 60px;
   padding-bottom: 60px;
   // background-color: aquamarine;
-  outline: 2px solid yellow;
+  // outline: 2px solid yellow;
 
   @include desktop {
     padding-top: 94px;

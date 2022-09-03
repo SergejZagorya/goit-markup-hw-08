@@ -33,6 +33,7 @@
   --secondary-weight: 500;
   --main-weight: 400;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 h1,
@@ -73,31 +74,26 @@ body.modal-open {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
 }
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    outline: 2px solid blue;
   }
 }
 @media screen and (min-width: 767px) {
   .container {
     width: 768px;
-    outline: 2px solid darkgreen;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    outline: 2px solid lightslategrey;
   }
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  outline: 2px solid yellow;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -196,7 +192,7 @@ body.modal-open {
 }
 @media screen and (max-width: 479px) {
   .modal {
-    top: 65%;
+    top: 55%;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1200px) {
@@ -602,6 +598,14 @@ body.modal-open {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .form-inner {
+    margin-left: auto;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .form-inner__slogan {
   display: block;
   margin-bottom: 20px;
@@ -628,7 +632,7 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .form-footer {
-    text-align: center;
+    display: block;
   }
 }
 
@@ -699,6 +703,11 @@ body.modal-open {
 @media screen and (min-width: 767px) {
   .form-footer__input {
     width: 450px;
+  }
+}
+@media screen and (min-width: 767px) and (min-width: 1200px) {
+  .form-footer__input {
+    width: 358px;
   }
 }
 
@@ -860,7 +869,7 @@ body.modal-open {
 }
 @media screen and (max-width: 380px) {
   .mobile-menu__contacts-tell {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 
@@ -870,11 +879,6 @@ body.modal-open {
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--text-color);
-}
-@media screen and (max-width: 380px) {
-  .mobile-menu__contacts-mail {
-    font-size: 28px;
-  }
 }
 
 .mobile-menu__socials {
@@ -1136,15 +1140,25 @@ body.modal-open {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--hero-background-color);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bground.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bground.jpg);
+  background-image: var(--gradient), url(../images/hero/bg-480-control.jpg);
   height: 400px;
   background-size: cover;
   background-position: center;
 }
-@media screen and (min-width: 767px) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/hero/bg-480@2x.jpg);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1200px) {
   .hero {
     max-width: 768px;
+    background-image: var(--gradient), url(../images/hero/bg-768.jpg);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 767px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 767px) and (max-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 767px) and (max-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/hero/bg-768@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1153,6 +1167,12 @@ body.modal-open {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: var(--gradient), url(../images/hero/bg-1200.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/hero/bg-1200@2x.jpg);
   }
 }
 
@@ -1239,6 +1259,7 @@ body.modal-open {
 }
 
 .hero__icon-hovered {
+  display: none;
   position: absolute;
   top: 50%;
   left: 15%;
@@ -1253,6 +1274,11 @@ body.modal-open {
 .hero__button:hover .hero__icon-hovered {
   -webkit-transform: translate(-55%, -50%);
           transform: translate(-55%, -50%);
+}
+@media screen and (min-width: 1200px) {
+  .hero__button:hover .hero__icon-hovered {
+    display: block;
+  }
 }
 
 .advant__inner {
@@ -1290,7 +1316,6 @@ body.modal-open {
 
 .advant__item {
   width: 100%;
-  outline: 2px solid yellow;
 }
 @media screen and (min-width: 767px) {
   .advant__item {
@@ -1370,7 +1395,6 @@ body.modal-open {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-background-color);
-  outline: 2px solid yellow;
 }
 @media screen and (min-width: 767px) {
   .team__item {
@@ -1492,6 +1516,11 @@ body.modal-open {
   text-align: center;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    text-align: start;
+  }
+}
 
 .footer__item {
   display: block;
@@ -1509,6 +1538,12 @@ body.modal-open {
 .address-bottom {
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .address-bottom {
+    text-align: start;
+    margin-bottom: 0;
+  }
 }
 
 .footer__address {
@@ -1540,6 +1575,11 @@ body.modal-open {
     margin: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer__inner {
+    margin-left: 70px;
+  }
+}
 
 .footer__slogan {
   text-align: center;
@@ -1550,6 +1590,11 @@ body.modal-open {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-title-color);
+}
+@media screen and (min-width: 1200px) {
+  .footer__slogan {
+    text-align: left;
+  }
 }
 
 .filter__btn {

@@ -27,7 +27,6 @@
 
 .advant__item {
   width: 100%;
-  outline: 2px solid yellow;
 
   @include tablet {
     width: calc((100% - 30px) / 2);

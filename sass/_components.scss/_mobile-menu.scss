@@ -88,7 +88,7 @@
   color: var(--accent-color);
 
   @media screen and (max-width: 380px) {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 
@@ -98,10 +98,6 @@
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--text-color);
-
-  @media screen and (max-width: 380px) {
-    font-size: 28px;
-  }
 }
 .mobile-menu__socials {
   display: inline-flex;
