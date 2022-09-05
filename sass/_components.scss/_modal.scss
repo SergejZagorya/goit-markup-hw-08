@@ -10,12 +10,6 @@
   overflow-y: scroll;
   background-color: var(--modal-bg-color);
   transition: visibility 500ms var(--timing-function), opacity 500ms var(--timing-function);
-
-  &.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
 }
 
 .modal {

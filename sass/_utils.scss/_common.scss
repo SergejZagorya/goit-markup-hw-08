@@ -5,10 +5,6 @@ body {
   background-color: var(--primary-background-color);
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -83,4 +79,10 @@ body.modal-open {
   @include desktop {
     margin-bottom: 50px;
   }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

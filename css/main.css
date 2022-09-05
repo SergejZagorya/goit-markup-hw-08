@@ -65,10 +65,6 @@ body {
   background-color: var(--primary-background-color);
 }
 
-body.modal-open {
-  overflow: hidden;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -146,6 +142,12 @@ body.modal-open {
   }
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* *Модальное окно */
 .backdrop {
   position: fixed;
@@ -158,11 +160,6 @@ body.modal-open {
   background-color: var(--modal-bg-color);
   -webkit-transition: visibility 500ms var(--timing-function), opacity 500ms var(--timing-function);
   transition: visibility 500ms var(--timing-function), opacity 500ms var(--timing-function);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .modal {
@@ -810,11 +807,6 @@ body.modal-open {
   .mobile-menu {
     padding: 8px 40px;
   }
-}
-.mobile-menu.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 @media screen and (max-width: 768px) {
