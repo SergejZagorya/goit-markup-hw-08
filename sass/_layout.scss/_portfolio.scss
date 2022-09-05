@@ -78,7 +78,9 @@
 }
 
 .cards__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   transition: box-shadow 250ms var(--timing-function);
 
   &:focus {
