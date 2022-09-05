@@ -3,7 +3,7 @@
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: var(--hero-background-color);
-  background-image: var(--gradient), url(../images/hero/bg-480-control.jpg);
+  background-image: var(--gradient), url(../images/hero/bg-480.jpg);
 
   height: 400px;
   background-size: cover;
@@ -13,12 +13,15 @@
     background-image: var(--gradient), url(../images/hero/bg-480@2x.jpg);
   }
 
-  @include tablet-only {
-    max-width: 768px;
-    background-image: var(--gradient), url(../images/hero/bg-768.jpg);
+  // @include tablet-only {
+  //   max-width: 768px;
+  //   background-image: var(--gradient), url(../images/hero/bg-768.jpg);
+  @include tablet {
+    width: 100%;
+    background-image: var(--gradient), url(../images/hero/bg-1200.jpg);
 
     @include retina {
-      background-image: var(--gradient), url(../images/hero/bg-768@2x.jpg);
+      background-image: var(--gradient), url(../images/hero/bg-1200@2x.jpg);
     }
   }
 

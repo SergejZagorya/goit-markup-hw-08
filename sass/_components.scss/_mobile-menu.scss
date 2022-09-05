@@ -11,24 +11,29 @@
   padding: 48px 40px;
 
   background-color: var(--primary-background-color);
-  outline: 2px dashed red;
+  // outline: 2px dashed red;
+
+  transition: visibility 300ms var(--timing-function), opacity 300ms var(--timing-function);
 
   @media screen and (max-width: 450px) {
     padding: 8px 40px;
   }
 
   &.is-hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.mobile-menu__contacts-inner {
+  @include mobile-only {
+    margin-top: auto;
   }
 }
 
 .mobile-menu__contacts {
-  margin-top: auto;
   margin-bottom: 64px;
-
-  @media screen and (max-width: 450px) {
-    margin-bottom: auto;
-  }
 }
 
 .menu__button {
@@ -42,15 +47,31 @@
     display: none;
   }
 }
+
+.icon-open {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .menu__button-open:hover & {
+    fill: var(--accent-color);
+  }
+
+  .menu__button-open:focus & {
+    fill: var(--accent-color);
+  }
+}
+
 .menu__button-close {
   position: absolute;
   top: 10px;
   right: 8px;
-  :hover {
+}
+
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .menu__button-close:focus & {
     fill: var(--accent-color);
   }
-}
-.icon-close {
 }
 .list {
 }
@@ -67,6 +88,12 @@
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .mobile-menu__nav-link-current {
@@ -101,34 +128,31 @@
 }
 .mobile-menu__socials {
   display: inline-flex;
-  // justify-content: space-evenly;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     flex-direction: column;
-    :not(last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.mobile-menu__socials-item {
+  border-right: 2px solid rgba(33, 33, 33, 0.2);
+  margin-bottom: 0;
+  margin-right: 10px;
+  padding-right: 10px;
+
+  @include start {
+    width: 100px;
+    margin-right: 0;
+
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
-}
-.mobile-menu__socials-item {
-  position: relative;
-  &:not(last-child) {
-    margin-right: 20px;
-  }
 
-  &:not(:first-child)::before {
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: -10px;
-    content: "";
-    width: 2px;
-    height: 103%;
-    background-color: rgba(33, 33, 33, 0.2);
-    border-radius: 2px;
-
-    @media screen and (max-width: 480px) {
-      display: none;
+  @include mobile {
+    &:last-child {
+      border: none;
     }
   }
 }
